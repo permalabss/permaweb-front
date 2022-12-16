@@ -205,7 +205,7 @@ export default {
       // 加一个loading
       this.collectLoading = true
       //
-      axios.get('https://api.permapage.xyz:8868/fetchurl/fetchurl', {
+      axios.get('https://api.permapage.xyz/fetchurl/fetchurl', {
         timeout: 100000,
         params: {
           url: this.form.url
