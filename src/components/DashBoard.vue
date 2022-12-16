@@ -66,6 +66,10 @@
                                style="margin-left: 10px; margin-top: 10px">
                       show on permaweb
                     </el-button>
+                    <el-button align="left" type="primary" @click="showOnViewBlock(scope.row.id)"
+                               style="margin-left: 10px; margin-top: 10px">
+                      transaction detail
+                    </el-button>
                   </template>
                   >
                 </el-table-column>
@@ -273,6 +277,10 @@ export default {
     },
     showOnArweave(id) {
       const url = 'https://arweave.net/' + id
+      window.open(url, "_blank")
+    },
+    showOnViewBlock(id) {
+      const url = 'https://viewblock.io/arweave/tx/' + id
       window.open(url, "_blank")
     },
     show(id) {
