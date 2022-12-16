@@ -1,0 +1,1 @@
+// import  Record  from 'linkfeed/record'
