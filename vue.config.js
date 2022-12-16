@@ -4,7 +4,10 @@ module.exports = defineConfig({
   devServer: {
     historyApiFallback: true,
     allowedHosts: ".permapage.xyz",
-    https: true,
+    client: {
+      webSocketURL: 'wss://0.0.0.0:8080/ws',
+    },
+    // https: true,
   },
   transpileDependencies: true,
   configureWebpack: {
