@@ -205,7 +205,7 @@ export default {
       // 加一个loading
       this.collectLoading = true
       //
-      axios.get('http://ip-172-31-80-140.tailnet-d842.ts.net:8868/fetchurl', {
+      axios.get('https://api.permapage.xyz:8868/fetchurl/fetchurl', {
         timeout: 100000,
         params: {
           url: this.form.url
