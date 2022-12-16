@@ -10,7 +10,7 @@
     <el-row type="flex" justify="center" style="margin-top: 100px; margin-bottom: 50px">
       <el-col :span="12">
         <div style="text-align: center">
-          <h1 style="color: white; font-family: 'Roboto', sans-serif">Welcome to ChainFeeds Saving</h1>
+          <h1 style="color: white; font-family: 'Roboto', sans-serif">Welcome!</h1>
           <h2 style="color: #DDDDDD; font-family: 'Roboto', sans-serif">A privacy, decentralization, easy to pay, permanent network disk</h2>
         </div>
       </el-col>
