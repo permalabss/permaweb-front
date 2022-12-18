@@ -7,9 +7,10 @@
             class="el-menu-vertical-demo"
             mode="horizontal"
             @select="handleSelect">
-          <el-menu-item>
-            <div style="margin-left: 160px;font-size: 26px;">
-              <span style="font-family: 'Times New Roman',serif">PermaPage</span>
+          <el-menu-item index="3">
+            <div style="font-size: 0px;">
+              <span style="font-size:26px; font-family: 'PingFang SC',serif; color:#00d9ff;">Perma</span>
+              <span style="font-size:26px; font-family: 'PingFang SC',serif; margin-left: 0px">Page</span>
             </div>
           </el-menu-item>
           <el-menu-item index="1">
@@ -21,7 +22,7 @@
           <el-menu-item>
             <div style="float: right;margin-left: 390px">
               <el-button v-if="connected" size="small" >{{ shortAccount }}</el-button>
-              <el-button v-else size="small" @click="connectMetamask">connect wallet</el-button>
+              <el-button v-else size="small" @click="connectMetamask">Connect Wallet</el-button>
             </div>
           </el-menu-item>
         </el-menu>
@@ -49,7 +50,7 @@
                   <el-button type="info" @click="collectWeb" :loading = "collectLoading">Keep</el-button>
                 </div>
               </div>
-              <div v-else style="margin-top: 20px"><el-button type="primary" size="small" @click="connectMetamask">connect wallet</el-button></div>
+              <div v-else style="margin-top: 20px"><el-button type="primary" size="small" @click="connectMetamask">Connect Wallet</el-button></div>
             </el-card>
             <el-card v-if="collectedVisible">
               <el-table :data="webs" border>
@@ -81,7 +82,7 @@
               About
             </div>
             <div>
-              <span style="color:red;">PermaLabs</span> can keep web pages permanently in your web3 wallet, even if the original web page disappears.
+              <span style="color:#0048ff;">PermaLabs</span> can keep web pages permanently in your <span style="color:rgba(255,72,0,0.83);">web3 wallet</span>, even if the original web page disappears.
             </div>
           </el-card></el-col>
         </el-row>
@@ -144,7 +145,7 @@ export default {
   },
   methods:{
     handleSelect(key, keyPath) {
-      if (key === '1') {
+      if (key === '1' || key === '3') {
         this.homeVisible = true
         this.collectedVisible = false
       } else if (key === '2') {
@@ -170,7 +171,7 @@ export default {
       await this.getOrders()
       this.intervalUpdateOrders()
       await this.getBalances()
-      this.shortAccount = this.signerAddr
+      this.shortAccount = this.signerAddr.substring(0, 6) + '...' + this.signerAddr.substring(this.signerAddr.length - 4)
     },
     collectWeb() {
       // 加一个loading
@@ -318,6 +319,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
 
 .el-container:nth-child(5) .el-aside,
@@ -354,5 +356,11 @@ export default {
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
+}
+
+</style>
+<style>
+.el-menu {
+  margin-left: 160px;
 }
 </style>
