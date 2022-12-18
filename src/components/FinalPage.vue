@@ -46,9 +46,16 @@
                       :value="symbol"
                   />
                 </el-select>
+
                 <div style="margin-top: 20px">
-                  <el-button type="info" @click="collectWeb" :loading = "collectLoading">Keep</el-button>
+                  <span style="color:rgba(255,60,0,0.83);">Deposit: </span><a style="color:rgba(255,60,0,0.83);" :href="`https://app.everpay.io/`" target="_blank">https://app.everpay.io/</a>
                 </div>
+
+                <div style="margin-top: 20px">
+                  <el-button type="primary" @click="collectWeb" :loading = "collectLoading">Keep</el-button>
+                </div>
+<!--                加一个a跳转标签 去掉下滑线-->
+
               </div>
               <div v-else style="margin-top: 20px"><el-button type="primary" size="small" @click="connectMetamask">Connect Wallet</el-button></div>
             </el-card>
@@ -363,4 +370,5 @@ export default {
 .el-menu {
   margin-left: 160px;
 }
+a{text-decoration:none}
 </style>
