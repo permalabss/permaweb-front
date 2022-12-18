@@ -8,7 +8,7 @@ export function dateFormat(dataStr){
     }
     var y = time.getFullYear()
     var m = time.getMonth() + 1
-    var d = time.getDate()
+    var d = time.getDate() + 8
     var h = time.getHours()
     var mm = time.getMinutes()
     var s = time.getSeconds()
