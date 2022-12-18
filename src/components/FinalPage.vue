@@ -82,7 +82,7 @@
               About
             </div>
             <div>
-              <span style="color:#0048ff;">PermaLabs</span> can keep web pages permanently in your <span style="color:rgba(255,72,0,0.83);">web3 wallet</span>, even if the original web page disappears.
+              <span style="color:#00d9ff;">PermaLabs</span> can keep web pages permanently in your <span style="color:rgba(255,72,0,0.83);">web3 wallet</span>, even if the original web page disappears.
             </div>
           </el-card></el-col>
         </el-row>
